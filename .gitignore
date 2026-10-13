@@ -12,5 +12,15 @@ wheels/
 
 # Virtual environments
 .venv
+.venv-mcp
+venv/
+.env
 .env.example
 .idea
+
+# Dokumen contoh / hasil tes lokal (jangan push file pribadi)
+sample_*.docx
+*_backup.docx
+*.italic.docx
+work/
+*.pdf
