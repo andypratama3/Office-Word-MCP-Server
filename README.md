@@ -1,5 +1,38 @@
 # Office-Word-MCP-Server
 
+> Fork aktif dengan tambahan: **live-edit Word (macOS)**, **`smart_write.py`**
+> (satu pintu tulis otomatis live/file), dan **skills skripsi + jurnal**.
+> Upstream asli: [GongRzhe/Office-Word-MCP-Server](https://github.com/gongrzhe/office-word-mcp-server) (diarsipkan).
+
+## Mulai Cepat (5 menit, macOS / Linux)
+
+```bash
+git clone <URL-FORK-INI>.git
+cd <nama-repo>
+bash install.sh          # venv + dependensi + daftar MCP + pasang skills (idempotent)
+```
+
+Lalu **restart OpenCode**, dan tes:
+
+```bash
+.venv-mcp/bin/python smart_write.py append ~/Downloads/Doc1.docx "Halo live" --watch
+```
+
+Windows: pakai Git Bash/WSL, atau pasang manual (Python ≥ 3.11 → `pip install
+fastmcp python-docx msoffcrypto-tool python-dotenv docx2pdf pytest` →
+daftarkan MCP sesuai `install.sh` langkah 3).
+
+| Mau apa? | Baca |
+|----------|------|
+| Pakai MCP + live-edit + smart_write | `skills/office-word-mcp/SKILL.md` |
+| Menulis skripsi (BAB I–V) | `skills/skripsi-writing/SKILL.md` |
+| Menulis artikel jurnal (IMRAD) | `skills/jurnal-writing/SKILL.md` |
+| Rapikan italic istilah asing (repo pendamping) | [office-skripsi](https://github.com/andypratama3/office-skripsi) |
+| Berkontribusi | `CONTRIBUTING.md` |
+
+---
+*Dokumentasi upstream asli dimulai di bawah ini.*
+
 [![smithery badge](https://smithery.ai/badge/@GongRzhe/Office-Word-MCP-Server)](https://smithery.ai/server/@GongRzhe/Office-Word-MCP-Server)
 
 A Model Context Protocol (MCP) server for creating, reading, and manipulating Microsoft Word documents. This server enables AI assistants to work with Word documents through a standardized interface, providing rich document editing capabilities.
